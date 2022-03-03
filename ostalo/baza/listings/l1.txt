@@ -1,0 +1,31 @@
+{
+    "_id" : ObjectId("60e304ed12c2ca9d96d04fb6"),
+    "description" : "Penthouse in Airport city",
+    "city" : "Belgrade",
+    "municipality" : "Novi Beograd",
+    "address" : "Jurija Gagarina",
+    "number" : 118,
+    "type" : "apartment",
+    "numoflevels" : 32,
+    "level" : 32,
+    "size" : 97,
+    "numofrooms" : 5,
+    "furnished" : "no",
+    "price" : 160000,
+    "owner" : "admin123",
+    "status" : "2",
+    "promoted" : "0",
+    "buyer" : "milos123",
+    "__v" : 0,
+    "wantToBuy" : [ 
+        "milos123", 
+        "agent123", 
+        "kaca123"
+    ],
+    "paths" : [ 
+        "avatar-1625845318886.jpeg", 
+        "avatar-1625845318887.jpeg", 
+        "avatar-1625845318889.jpeg", 
+        "avatar-1625845318890.jpeg"
+    ]
+}

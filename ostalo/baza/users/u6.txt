@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("60df39c008cc0341f8c0506d"),
+    "name" : "Marija",
+    "surname" : "Todorovic",
+    "username" : "marija123",
+    "password" : "marija123",
+    "mail" : "marijam@gmail.com",
+    "city" : "Belgrade",
+    "country" : "Serbia",
+    "type" : "user",
+    "status" : "1",
+    "image" : "",
+    "__v" : 0
+}

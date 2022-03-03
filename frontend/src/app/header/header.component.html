@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+   
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link text-light" style="cursor:pointer" (click) ="navHome()"  >Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item"  *ngIf="is_logged == 'logged'">
+            <a class="nav-link text-light" style="cursor:pointer" (click) = "navMyListings()" >My Listings</a>
+        </li>
+        <li class="nav-item"  *ngIf="type== 'agent' || type =='admin'">
+            <a class="nav-link text-light" style="cursor:pointer" (click) = 'navApproveListing()'>Listings</a>
+        </li>
+        <li class="nav-item"  *ngIf="is_logged == 'logged'">
+            <a class="nav-link text-light" style="cursor:pointer" (click) = 'navProfile()' >Profile</a>
+        </li>
+        <li class="nav-item"  *ngIf="type=='admin'">
+            <a class="nav-link text-light" style="cursor:pointer" (click) = 'navAdmin()'>Admin Panel</a>
+        </li>
+        </ul>
+        <button type="button" *ngIf="is_logged == 'logged' " class="btn btn-warning" (click) ="logout()">Log Out</button>
+        <button type="button" *ngIf="is_logged != 'logged' " class="btn btn-warning" (click) ="login()">Log In</button>
+        
+    </div>
+</nav>
+<br>

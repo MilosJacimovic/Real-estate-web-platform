@@ -1,0 +1,15 @@
+<form>
+    <div class="form-group">
+        <fieldset class="form-group">
+            <div class="custom-file fileInputProfileWrap">
+                <input type="file" (change)="fileChangeEvent($event)" class="fileInputProfile">
+                <div class="img-space">
+
+                    <ng-container>
+                        <img  [src]="cardImageBase64" />
+                    </ng-container>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</form>

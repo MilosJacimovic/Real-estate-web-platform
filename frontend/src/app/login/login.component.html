@@ -1,0 +1,59 @@
+
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <form (submit)="login()"> 
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Username:
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='username' name="username" type="text" placeholder="Username"/>
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Password:
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='password' name="password" type="password" placeholder="Password" />
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="row m-auto">
+            <div class="col-5 offset-4 text-center text-danger">
+                {{message}}
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-5 offset-4 text-center text-success">
+                {{regOk}}
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-5">
+                <button type="submit" (click) = 'login()' class="btn btn-success col-12">Login</button>
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-1 offset-6 text-center text-secondary">
+                <h5>or</h5>
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-5">
+                <button type="submit" (click) = 'register()' class="btn btn-success col-12">Register</button>
+            </div>
+        </div>
+        <br>
+    </form>
+</div>

@@ -1,0 +1,27 @@
+{
+    "_id" : ObjectId("60ec9181f2a1873d280dfb33"),
+    "wantToBuy" : [],
+    "paths" : [ 
+        "avatar-1626103486996.jpeg", 
+        "avatar-1626103487054.jpeg", 
+        "avatar-1626103487061.jpeg", 
+        "avatar-1626103487065.jpeg"
+    ],
+    "description" : "New house listing",
+    "city" : "Belgrade",
+    "municipality" : "Zemun",
+    "address" : "Savska",
+    "number" : 13,
+    "type" : "house",
+    "numoflevels" : 1,
+    "level" : 1,
+    "size" : 79,
+    "numofrooms" : 4,
+    "furnished" : "no",
+    "price" : 86000,
+    "owner" : "jonny123",
+    "status" : "1",
+    "promoted" : "0",
+    "buyer" : "",
+    "__v" : 0
+}

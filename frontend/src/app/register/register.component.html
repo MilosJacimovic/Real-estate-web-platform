@@ -1,0 +1,92 @@
+<br>
+<br>
+<div class="container">
+    <form> 
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Name:
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='name' name="name" type="text" placeholder="First name"/>
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2 auto">
+                Surname:
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='surname' name="surname" type="text" placeholder="Last name"/>
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Mail: 
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='mail' name="email" type="text" placeholder="Email"/>
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Username:
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='username' name="username" type="text" placeholder="Username"/>
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Password:
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='password' name="password" type="password" placeholder="Password" />
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Confirm password: 
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='confpassword' name="password_confirmation" type="password" placeholder="Password confirmation"/>
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                City: 
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='city' name="pob" type="text" placeholder="City"/>
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Country: 
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='country' name="pob" type="text" placeholder="Country"/>
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-12 text-center text-danger">
+                {{message}}
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row m-auto">
+            <div class="col-6 offset-3">
+                <button type="submit" (click) = "register()" class="btn btn-success col-12">Register</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<br>

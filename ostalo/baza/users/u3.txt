@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("60d8d639db94399dd424e9c7"),
+    "name" : "Admin",
+    "surname" : "Adminic",
+    "username" : "admin123",
+    "password" : "admin123",
+    "mail" : "adminovmail@hotmail.com",
+    "city" : "Belgrade",
+    "country" : "Serbia",
+    "type" : "admin",
+    "status" : "1",
+    "image" : "",
+    "__v" : 0
+}

@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("60ed827478f6e74dfc9a48a5"),
+    "name" : "AdminAdded",
+    "surname" : "User",
+    "username" : "adminaddeduser123",
+    "password" : "adminaddeduser123",
+    "mail" : "aas@gmail.com",
+    "city" : "Belgrade",
+    "country" : "Serbia",
+    "type" : "user",
+    "status" : "0",
+    "image" : "",
+    "__v" : 0
+}

@@ -1,0 +1,182 @@
+<app-charts *ngIf = "showCharts == 1"></app-charts>
+<br>
+<br>
+<div class="row m-auto" *ngIf = "promotedExist">
+    <div class="col-12 text-center text-success">
+        <h3>Promoted listings</h3>
+    </div>
+</div>
+<br>
+<br>
+<div class="row" *ngIf = "promotedExist">
+    <div class="col-10 offset-1">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-success">Promoted listing</th>
+                    <th>Description</th>
+                    <th>City</th>
+                    <th>Size</th>
+                    <th>Type</th>
+                    <th>Number of rooms</th>
+                    <th>Price</th>
+                    <th *ngIf = "myUsername != undefined">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let listing of promoted">
+                    <th *ngIf="listing.status == '1' && listing.buyer == ''"><img width="270" height="200" src = "{{srcForImage}}{{listing.description}}/{{listing.paths[ranNum()]}}"></th>
+                    <th *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.description}}</th>
+                    <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.city}}</td>
+                    <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.size}} sqm</td>
+                    <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.type}}</td>
+                    <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.numofrooms}}</td>
+                    <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.price}}</td>
+                    <td *ngIf="listing.status == '1' && listing.buyer == '' && myUsername != undefined"><button type="button" class="btn btn-primary" (click) = "navListing(listing.description)">Details</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
+<br>
+
+<div >
+    <div class="col-12 text-center text-primary">
+        <h3>Search</h3>
+    </div>
+    <div class="col-12 text-center text-primary">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>City</th>
+					<th>Highest price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type='text' name='sf1' [(ngModel)]='citySearch'></td>
+                    <td><input type='text' name='sf2' [(ngModel)]='priceSearch'></td> 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="col-12 text-center text-primary">
+    <button type="button" class="btn btn-primary" (click) = "search()">Search</button> | <button type="button" class="btn btn-primary" (click) = "clear()">Clear</button>
+</div>
+<br>
+<div class="col-12 text-center text-warning">
+    {{searchMessage}}
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="listofalllistings" *ngIf = "searched">
+    <div class="row">
+        <div class="row m-auto">
+            <div class="col-12 text-center text-primary">
+                <h3>Search results</h3>
+            </div>
+        </div>
+        <div class="col-10 offset-1">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Searched listings</th>
+                        <th>Description</th>
+                        <th>City</th>
+                        <th>Size</th>
+                        <th>Type</th>
+                        <th>Rooms</th>
+                        <th>Price</th>
+                        <th *ngIf = "myUsername != undefined">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let listing of searchListings">
+                        <td *ngIf="listing.status == '1' && listing.buyer == ''"><img width="270" height="200" src = "{{srcForImage}}{{listing.description}}/{{listing.paths[ranNum()]}}"></td>
+                        <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.description}}</td>
+                        <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.city}}</td>
+                        <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.size}} sqm</td>
+                        <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.type}}</td>
+                        <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.numofrooms}}</td>
+                        <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.price}}</td>
+                        <td *ngIf="listing.status == '1' && listing.buyer == '' && myUsername != undefined"><button type="button" class="btn btn-primary" (click) = "navListing(listing.description)" >Details</button></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="listofalllistings" *ngIf = "!searched">
+    <div class="row">
+        <div class="row m-auto">
+            <div class="col-12 text-center text-primary">
+                <h3>All Listings</h3>
+            </div>
+        </div>
+        <div class="col-10 offset-1">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Description</th>
+                        <th>City</th>
+                        <th>Size</th>
+                        <th>Type</th>
+                        <th>Rooms</th>
+                        <th>Price</th>
+                        <th *ngIf = "myUsername != undefined">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let listing of listings">
+                        <th *ngIf="listing.status == '1' && listing.buyer == ''"><img width="270" height="200" src = "{{srcForImage}}{{listing.description}}/{{listing.paths[ranNum()]}}"></th>
+                        <th *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.description}}</th>
+                        <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.city}}</td>
+                        <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.size}} sqm</td>
+                        <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.type}}</td>
+                        <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.numofrooms}}</td>
+                        <td *ngIf="listing.status == '1' && listing.buyer == ''">{{listing.price}}</td>
+                        <td *ngIf="listing.status == '1' && listing.buyer == '' && myUsername != undefined"><button type="button" class="btn btn-primary" (click) = "navListing(listing.description)">Details</button></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<form *ngIf = "isAdmin == 'admin'"> 
+    <div class="row m-auto">
+        <div class="col-3 offset-1">
+            Upload photo:
+        </div>
+        <div class="col-5">
+            <input type="file"  multiple (change) = "file_change($event)" class="fileInputProfile">
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-6 offset-3">
+                <button (click) = 'uploadPhoto()'>Upload</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    {{file_uploaded_message}}
+    {{error_file_uploaded_message}}
+</form>
+<br>
+<br>
+<br>
+<br>
+
+<br>

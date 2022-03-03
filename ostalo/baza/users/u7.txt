@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("60e053d7d9cd8610044f9317"),
+    "name" : "Darko",
+    "surname" : "Darkovic",
+    "username" : "darko123",
+    "password" : "darko123",
+    "mail" : "darkod@gmail.com",
+    "city" : "Belgrade",
+    "country" : "Serbia",
+    "type" : "agent",
+    "status" : "1",
+    "image" : "",
+    "__v" : 0
+}

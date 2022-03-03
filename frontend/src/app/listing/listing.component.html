@@ -1,0 +1,161 @@
+
+<div class="row m-auto">
+    <div class="col-12 text-center text-primary">
+        <div class='container-fluid'>   
+            <div class='col-12'>  
+                <ngb-carousel>  
+                    <ng-template class="box" ngbSlide>  
+                        <img width="1300" height="450" src = "{{srcForImage}}{{listing.description}}/{{listing.paths[0]}}">   
+                    </ng-template>  
+                    <ng-template class="box" ngbSlide *ngIf = "listing.paths[1]">  
+                        <img width="1300" height="450" src = "{{srcForImage}}{{listing.description}}/{{listing.paths[1]}}">  
+                    </ng-template>  
+                    <ng-template class="box" ngbSlide *ngIf = "listing.paths[2]">  
+                        <img width="1300" height="450" src = "{{srcForImage}}{{listing.description}}/{{listing.paths[2]}}">  
+                    </ng-template>  
+                    <ng-template class="box" ngbSlide *ngIf = "listing.paths[3]">  
+                        <img width="1300" height="450" src = "{{srcForImage}}{{listing.description}}/{{listing.paths[3]}}">  
+                    </ng-template>  
+                    <ng-template class="box" ngbSlide *ngIf = "listing.paths[4] ">  
+                        <img width="1300" height="450" src = "{{srcForImage}}{{listing.description}}/{{listing.paths[4]}}">  
+                    </ng-template>
+                    <ng-template class="box" ngbSlide *ngIf = "listing.paths[5] ">  
+                        <img width="1300" height="450" src = "{{srcForImage}}{{listing.description}}/{{listing.paths[5]}}">  
+                    </ng-template>
+                    <ng-template class="box" ngbSlide *ngIf = "listing.paths[6] ">  
+                        <img width="1300" height="450" src = "{{srcForImage}}{{listing.description}}/{{listing.paths[6]}}">  
+                    </ng-template>
+                    <ng-template class="box" ngbSlide *ngIf = "listing.paths[7] ">  
+                        <img width="1300" height="450" src = "{{srcForImage}}{{listing.description}}/{{listing.paths[7]}}">  
+                    </ng-template>        
+                </ngb-carousel>  
+            </div>  
+        </div>  
+    </div>
+</div>
+<div class="row">
+    <div class="col-10 offset-1">
+        <table class="table">
+            <tr>
+                <th>Description</th>
+                <td>{{listing.description}}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{listing.city}}</td>
+            </tr>
+            <tr>
+                <th>Municipality</th>
+                <td>{{listing.municipality}}</td>
+            </tr>
+            <tr>
+                <th>Adress</th>
+                <td>{{listing.address}}</td>
+            </tr>
+            <tr>
+                <th>Number</th>
+                <td>{{listing.number}}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{listing.type}}</td>
+            </tr>
+            <tr>
+                <th>Number of levels</th>
+                <td>{{listing.numoflevels}}</td>
+            </tr>
+            <tr>
+                <th>Level</th>
+                <td>{{listing.level}}</td>
+            </tr>
+            <tr>
+                <th>Size</th>
+                <td>{{listing.size}}</td>
+            </tr>
+            <tr>
+                <th>Number of Rooms</th>
+                <td>{{listing.numofrooms}}</td>
+            </tr>
+            <tr>
+                <th>Furnished</th>
+                <td>{{listing.furnished}}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{listing.price}}</td>
+            </tr>
+            <br>
+            <br>
+            <br>
+            
+            
+        </table>
+    </div>
+</div>
+<div class="row m-auto" *ngIf="!hasBeenBought && listing.owner != myUsername && canIBuy == true">
+    <div class="col-12 text-center text-success">
+        <button type="submit"  class="btn btn-success col-3" (click) = "buyRequest(listing.description)">Request to buy</button>
+    </div>
+</div>
+<div class="row m-auto">
+    <div class="col-12 text-center text-success">
+        {{whoIsBuyer}}
+    </div>
+</div>
+<br>
+<br>
+<div class="row m-auto">
+    <div class="col-12 text-center text-success">
+        <h3>{{buyingMessage}}</h3>
+    </div>
+</div>
+<div *ngIf = "canIBuy == false && listing.buyer == ''" class="row m-auto">
+    <div class="col-12 text-center text-success">
+        {{warningMessage}}
+    </div>
+</div>
+<div class="row m-auto" *ngIf = "listing.buyer == myUsername">
+    <div class="col-12 text-center text-success">
+        {{BuyerMessage}}
+    </div>
+</div>
+<br>
+<br>
+<div class = "interestedBuyers" *ngIf = "listing.owner == myUsername && listing.buyer == ''">
+    <div class="row">
+        <div class="row m-auto">
+            <div class="col-12 text-center text-primary">
+                <h3>All buying requests</h3>
+            </div>
+        </div>
+        <div class="col-10 offset-1">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Country</th>
+                        <th>City</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of potentialBuyers">
+                        <th></th>
+                        <th >{{user.name}}</th>
+                        <td >{{user.surname}}</td>
+                        <td >{{user.country}}</td>
+                        <td >{{user.city}}</td>
+                        <td><button type="button" class="btn btn-primary" (click) = "acceptOffer(user.username)">Accept offer</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="row m-auto">
+    <div class="col-12 text-center text-success">
+        {{soldMessage}}
+    </div>
+</div>

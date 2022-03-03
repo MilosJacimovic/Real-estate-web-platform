@@ -1,0 +1,140 @@
+<div class="container">
+    <form> 
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Description:
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='description' name="description" type="text" placeholder="Short description">
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2 auto">
+                City:
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='city' name="city" type="text" placeholder="City"/>
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Minucipality: 
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='municipality' name="municipality" type="text" placeholder="Municipality"/>
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Address:
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='address' name="address" type="text" placeholder="Address"/>
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Address Number:
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='number' name="number" type="number" placeholder="Number" />
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Type: 
+            </div>
+            <div class="col-5">
+                <select name='Type' [(ngModel)]='type'>
+                    <option> house </option>
+                    <option> apartment </option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Number of floors: 
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='numoflevels' name="numoflevels" type="number" placeholder="Number of floors">
+            </div>
+        </div>
+        <br>
+        <div *ngIf = "type == 'apartment'" class="row m-auto">
+            <div class="col-3 offset-2">
+                Level: 
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='level' name="level" type="number" placeholder="Level"/>
+            </div>
+        </div>
+        <br *ngIf = "type == 'apartment'">
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Size:
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='size' name="size" type="number" placeholder="Size" />
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Number of rooms:
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='numofrooms' name="numofrooms" type="number" placeholder="Number of rooms" />
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+                Furnished:
+            </div>
+            <div class="col-5">
+                <select name='Type' [(ngModel)]='furnished'>
+                    <option> yes </option>
+                    <option> no </option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+               Price:
+            </div>
+            <div class="col-5">
+                <input class="col-12" [(ngModel)] ='price' name="price" type="number" placeholder="Price" />
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-3 offset-2">
+               Add images:
+            </div>
+            <div class="col-5">
+                <input class="col-12" type="file"  multiple (change) = "file_change($event)" class="fileInputProfile">
+                
+            </div>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-12 text-center text-danger">
+                {{message}}
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row m-auto">
+            <div class="col-6 offset-3">
+                <button type="submit" (click) = "addNewListing()" class="btn btn-success col-12">Add new listing</button>
+            </div>
+        </div>
+    </form>
+</div>

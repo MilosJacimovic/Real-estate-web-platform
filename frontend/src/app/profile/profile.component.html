@@ -1,0 +1,110 @@
+<div class="row m-auto">
+    <div class="col-12 text-center text-primary">
+        <h3>Welcome {{user.name}}</h3 >
+    </div>
+</div>
+<div class = "imagee" >
+        <div class="image">
+             <img src="{{profilePic}}" width="300" height="300">
+        </div> 
+</div>
+<br>
+<div class="row m-auto">
+    <div class="col-12 text-center text-primary">
+        <h3>Your information</h3    >
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-10 offset-1">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Username</th>
+                    <th>Mail</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-form="form">
+                    <td ><input type="text" #name value="{{user.name}}" ></td>
+                    <td><input type="text" #surname value="{{user.surname}}"></td>
+                    <td>{{user.username}}</td>
+                    <td><input type="text" #mail value="{{user.mail}}"></td>
+                    <td><input type="text" #city value="{{user.city}}"></td>
+                    <td ><input type="text" #country value="{{user.country}}"></td>
+                    <td><button type="button" class="btn btn-success" (click)="update()">Update</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
+<div class="row m-auto">
+    <div class="col-12 text-center text-primary">
+        <h3>Change password</h3>
+    </div>
+</div>
+<br>
+<div class="row text-center mx-5">
+    <div class="col">
+        <form>
+            <p><input type="password" class="mx-3" name="old_password" [(ngModel)] ='old_password' placeholder="Old password"></p>
+            <p><input type="password" class="mx-3" name="new_password" [(ngModel)] ='new_password' placeholder="New password"></p>
+            <p><input type="password" class="mx-3" name = "confirm_password" [(ngModel)] ='confirm_password' placeholder="Confirm password"></p>
+            <p><button (click) = 'changePassword()' class="btn btn-danger mx-3">Change password</button></p>
+        </form>
+    </div>
+</div>
+<br>
+<div class="row m-auto">
+    <div class="col-12 text-center text-success">
+        {{message}}
+    </div>
+</div>
+<br>
+<div class="row m-auto">
+    <div class="col-12 text-center text-primary">
+        <h3>Change profile picture</h3>
+    </div>
+</div>
+<br>
+<br>
+<form> 
+    <div class="row m-auto">
+        <div class="col-3 offset-1">
+            Upload photo:
+        </div>
+        <div class="col-5">
+            <input type="file"  (change) = "sendImageFile($event)" class="fileInputProfile">
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-6 offset-3">
+                <button (click) = 'uploadPhoto()'>Upload</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row m-auto">
+        <div class="col-12 text-center text-success">
+            {{file_uploaded_message}}
+        </div>
+    </div>
+    <div class="row m-auto">
+        <div class="col-12 text-center text-danger">
+            {{error_file_uploaded_message}}
+        </div>
+    </div>
+</form>
+
+
+<div class="row m-auto">
+    <div class="col-12 text-center text-danger">
+        {{errorMessage}}
+    </div>
+</div>

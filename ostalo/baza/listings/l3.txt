@@ -1,0 +1,29 @@
+{
+    "_id" : ObjectId("60e3522d096bc604d435f651"),
+    "description" : "Amazing new apartment",
+    "city" : "Nis",
+    "municipality" : "Palilula",
+    "address" : "Kralja Petra",
+    "number" : 35,
+    "type" : "apartment",
+    "numoflevels" : 11,
+    "level" : 10,
+    "size" : 83,
+    "numofrooms" : 4,
+    "furnished" : "no",
+    "price" : 90000,
+    "owner" : "milos123",
+    "status" : "1",
+    "promoted" : "0",
+    "buyer" : "",
+    "wantToBuy" : [ 
+        "dragana123"
+    ],
+    "paths" : [ 
+        "avatar-1625845366872.jpeg", 
+        "avatar-1625845366874.jpeg", 
+        "avatar-1625845366875.jpeg", 
+        "avatar-1625845366877.jpeg"
+    ],
+    "__v" : 0
+}

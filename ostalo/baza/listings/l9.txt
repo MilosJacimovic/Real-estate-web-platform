@@ -1,0 +1,27 @@
+{
+    "_id" : ObjectId("60ec5ebef2a1873d280dfb32"),
+    "wantToBuy" : [],
+    "paths" : [ 
+        "avatar-1626103486996.jpeg", 
+        "avatar-1626103487054.jpeg", 
+        "avatar-1626103487061.jpeg", 
+        "avatar-1626103487065.jpeg"
+    ],
+    "description" : "My villa",
+    "city" : "Kragujevac",
+    "municipality" : "Kragujevac",
+    "address" : "Luja Pastera",
+    "number" : 6,
+    "type" : "house",
+    "numoflevels" : 3,
+    "level" : 3,
+    "size" : 128,
+    "numofrooms" : 10,
+    "furnished" : "yes",
+    "price" : 270000,
+    "owner" : "jonny123",
+    "status" : "1",
+    "promoted" : "0",
+    "buyer" : "",
+    "__v" : 0
+}

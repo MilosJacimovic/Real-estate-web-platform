@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("60d8d61edb94399dd424e9bc"),
+    "name" : "Agent",
+    "surname" : "Agentic",
+    "username" : "agent123",
+    "password" : "agent123",
+    "mail" : "agentovmail@hotmail.com",
+    "city" : "Belgrade",
+    "country" : "Serbia",
+    "type" : "agent",
+    "status" : "1",
+    "image" : "",
+    "__v" : 0
+}

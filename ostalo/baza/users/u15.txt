@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("60ec38db5440ee568cf7288e"),
+    "name" : "Dragana",
+    "surname" : "Draganovic",
+    "username" : "dragana123",
+    "password" : "dragana123",
+    "mail" : "draganad@gmail.com",
+    "city" : "Leskovac",
+    "country" : "Serbia",
+    "type" : "user",
+    "status" : "1",
+    "image" : "",
+    "__v" : 0
+}

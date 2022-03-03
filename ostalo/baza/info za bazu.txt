@@ -1,0 +1,3 @@
+ime: nekretnjine
+kolekcija1: users
+kolekcija2: listings

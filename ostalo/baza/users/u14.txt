@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("60e5a41fc7ff874af0de2d4f"),
+    "name" : "Katarina",
+    "surname" : "Jovanovic",
+    "username" : "kaca123",
+    "password" : "kaca123",
+    "mail" : "kacaj@gmail.com",
+    "city" : "Kragujevac",
+    "country" : "Serbia",
+    "type" : "user",
+    "status" : "1",
+    "image" : "",
+    "__v" : 0
+}

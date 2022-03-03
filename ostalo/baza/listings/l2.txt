@@ -1,0 +1,27 @@
+{
+    "_id" : ObjectId("60e3058b12c2ca9d96d0501d"),
+    "description" : "BW terrace apartment",
+    "city" : "Belgrade",
+    "municipality" : "Belgrade",
+    "address" : "Bulvar street",
+    "number" : 23,
+    "type" : "apartment",
+    "numoflevels" : 20,
+    "level" : 17,
+    "size" : 69,
+    "numofrooms" : 5,
+    "furnished" : "yes",
+    "price" : 160000,
+    "owner" : "admin123",
+    "status" : "1",
+    "promoted" : "1",
+    "buyer" : "",
+    "wantToBuy" : [],
+    "paths" : [ 
+        "avatar-1625845359548.jpeg", 
+        "avatar-1625845359550.jpeg", 
+        "avatar-1625845359552.jpeg", 
+        "avatar-1625845359553.jpeg"
+    ],
+    "__v" : 0
+}

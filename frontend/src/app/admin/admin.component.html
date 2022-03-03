@@ -1,0 +1,78 @@
+
+<div class="row m-auto">
+    <div class="col-12 text-center text-primary">
+        <h3>Alter users</h3>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-10 offset-1">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Username</th>
+                    <th>Mail</th>
+                    <th>Type</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users" ng-form="form">
+                    <td *ngIf="user.type != 'admin'">{{user.name}}</td>
+                    <td *ngIf = "wantToUpdate && user.username == unameForUpdate"><input type="text" [(ngModel)]="newName"></td>
+                    <td *ngIf="user.type != 'admin'">{{user.surname}}</td>
+                    <td *ngIf = "wantToUpdate && user.username == unameForUpdate"><input type="text" [(ngModel)]="newSurname"></td>
+                    <td *ngIf="user.type != 'admin'">{{user.username}}</td>
+                    <td *ngIf="user.type != 'admin'">{{user.mail}}</td>
+                    <td *ngIf="user.type != 'admin'">{{user.type}}</td>
+                    <td *ngIf = "wantToUpdate && user.username == unameForUpdate"><input type="text" [(ngModel)]="newType"></td>
+                    <td *ngIf="user.type != 'admin' && user.status =='0'"><button type="button" class="btn btn-primary" (click)="approve(user.username)">Accept</button></td>
+                    <td *ngIf="user.type != 'admin' && user.status =='0'"><button type="button" class="btn btn-danger" (click)="decline(user.username)">Decline</button></td>
+                    <td *ngIf="user.type != 'admin' && user.status =='1' && !wantToUpdate"><button type="button" class="btn btn-success" (click)="update(user.username, user.mail)">Update</button></td>
+                    <td *ngIf="user.type != 'admin' && user.status =='1' && wantToUpdate"><button type="button" class="btn btn-success" (click)="updateUser(user.name, user.surname, user.username, user.mail, user.type)">Update</button></td>
+                    <td *ngIf="user.type != 'admin' && user.status =='1' && !wantToUpdate"><button type="button" class="btn btn-danger" (click)="delete(user.username)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
+<div class="col-12 text-center text-primary">
+    <h4><button type="button" class="btn btn-primary" (click) = "addUser()" >Add new user</button></h4>
+</div>
+<br>
+<br>
+<div class="col-12 text-center text-primary">
+    <h3>Add listings</h3>
+</div>
+<br>
+
+<form> 
+    <div class="row m-auto">
+        <div class="col-3 offset-1">
+            Upload JSON file:
+        </div>
+        <div class="col-5">
+            <input name="myFile" (change) = "file_change($event)" multiple type="file" accept=".json" class ="form-control"/>
+        </div>
+        <br>
+        <div class="row m-auto">
+            <div class="col-6 offset-3">
+                <button (click) = 'uploadJson()'>Upload</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row m-auto">
+        <div class="col-12 text-center text-success">
+            {{file_uploaded_message}}
+        </div>
+    </div>
+    <div class="row m-auto">
+        <div class="col-12 text-center text-danger">
+            {{error_file_uploaded_message}}
+        </div>
+    </div>
+</form>

@@ -1,0 +1,28 @@
+{
+    "_id" : ObjectId("60ed70b0c704815cb8064a70"),
+    "wantToBuy" : [],
+    "paths" : [ 
+        "avatar-1626173616323.jpeg", 
+        "avatar-1626173616345.jpeg", 
+        "avatar-1626173616356.jpeg", 
+        "avatar-1626173616358.jpeg", 
+        "avatar-1626173616360.jpeg"
+    ],
+    "description" : "Flat with a great view",
+    "city" : "Belgrade",
+    "municipality" : "Sava Mala",
+    "address" : "Dunavska",
+    "number" : 33,
+    "type" : "apartment",
+    "numoflevels" : 33,
+    "level" : 31,
+    "size" : 90,
+    "numofrooms" : 5,
+    "furnished" : "no",
+    "price" : 180000,
+    "owner" : "milos123",
+    "status" : "0",
+    "promoted" : "0",
+    "buyer" : "",
+    "__v" : 0
+}

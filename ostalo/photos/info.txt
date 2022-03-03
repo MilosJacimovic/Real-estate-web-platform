@@ -1,0 +1,1 @@
+ovaj folder treba da se smesti u projekat/backend

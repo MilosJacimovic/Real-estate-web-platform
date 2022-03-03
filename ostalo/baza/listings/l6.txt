@@ -1,0 +1,29 @@
+{
+    "_id" : ObjectId("60e81fcb8d63c93ec4c9a86d"),
+    "description" : "Old townhouse",
+    "city" : "Novi Sad",
+    "municipality" : "Novi Sad",
+    "address" : "Kolarceva",
+    "number" : 28,
+    "type" : "house",
+    "numoflevels" : 2,
+    "level" : 2,
+    "size" : 54,
+    "numofrooms" : 4,
+    "furnished" : "yes",
+    "price" : 76000,
+    "owner" : "pera123",
+    "status" : "1",
+    "promoted" : "1",
+    "buyer" : "",
+    "wantToBuy" : [ 
+        "kaca123"
+    ],
+    "paths" : [ 
+        "avatar-1625845429863.jpeg", 
+        "avatar-1625845429875.jpeg", 
+        "avatar-1625845429877.jpeg", 
+        "avatar-1625845429885.jpeg"
+    ],
+    "__v" : 0
+}

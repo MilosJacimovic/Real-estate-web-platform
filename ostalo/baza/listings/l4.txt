@@ -1,0 +1,29 @@
+{
+    "_id" : ObjectId("60e6e3e221c8504270350888"),
+    "description" : "Expansive apartment",
+    "city" : "Kragujevac",
+    "municipality" : "Palilula",
+    "address" : "Prvog Maja",
+    "number" : 5,
+    "type" : "apartment",
+    "numoflevels" : 7,
+    "level" : 6,
+    "size" : 56,
+    "numofrooms" : 3,
+    "furnished" : "yes",
+    "price" : 35000,
+    "owner" : "admin123",
+    "status" : "1",
+    "promoted" : "0",
+    "buyer" : "",
+    "wantToBuy" : [ 
+        "agent123"
+    ],
+    "paths" : [ 
+        "avatar-1625845375412.jpeg", 
+        "avatar-1625845375414.jpeg", 
+        "avatar-1625845375416.jpeg", 
+        "avatar-1625845375418.jpeg"
+    ],
+    "__v" : 0
+}

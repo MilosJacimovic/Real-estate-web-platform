@@ -1,0 +1,4 @@
+d3 	   - npm install d3 && npm install @types/d3 --save-dev
+boostrap   - npm install --save @ng-bootstrap/ng-bootstrap
+localize   - npm i @angular/localize
+multer     - npm install multer --save

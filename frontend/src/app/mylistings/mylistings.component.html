@@ -1,0 +1,95 @@
+<div class="row m-auto">
+    <div class="col-4 offset-4">
+        <button type="submit" (click) = 'addNewListing()' class="btn btn-success col-12">Add new listing</button>
+    </div>
+</div>
+<br>
+<br>
+<div class="row m-auto">
+    <div class="col-12 text-center text-primary">
+        <h3>{{message}}</h3>
+    </div>
+</div>
+<br>
+<br>
+<div class="row m-auto"  *ngIf = "noListings == true">
+    <div class="col-12 text-center text-primary">
+        <h3>My listings</h3>
+    </div>
+</div>
+<br>
+<br>
+<div class="row" *ngIf = "noListings == true">
+    <div class="col-10 offset-1">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>City</th>
+                    <th>Address</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let listing of myListings">
+                    <th>{{listing.description}}</th>
+                    <td>{{listing.city}}</td>
+                    <td>{{listing.address}}</td>
+                    <td>{{listing.type}}</td>
+                    <td>{{listing.price}}</td>
+                    <td *ngIf = "listing.status == '1'">Approved</td>
+                    <td *ngIf = "listing.status == '0'">Awaiting approval</td>
+                    <td *ngIf = "listing.status == '2'">Sold</td>
+                    <td ><button type="button" class="btn btn-primary" (click) = "navListing(listing.description)">Details</button></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
+<br>
+<div class="row m-auto"  *ngIf = "hasPurchases == true">
+    <div class="col-12 text-center text-primary">
+        <h3>My purchases</h3>
+    </div>
+</div>
+<br>
+<br>
+<div class="row m-auto">
+    <div class="col-12 text-center text-primary">
+        <h3>{{purchasesMessage}}</h3>
+    </div>
+</div>
+<div class="row" *ngIf = "hasPurchases == true">
+    <div class="col-10 offset-1">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>City</th>
+                    <th>Address</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Owner</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let listing of myPurchases">
+                    <th>{{listing.description}}</th>
+                    <td>{{listing.city}}</td>
+                    <td>{{listing.address}}</td>
+                    <td>{{listing.type}}</td>
+                    <td>{{listing.price}}</td>
+                    <td>{{listing.owner}}</td>
+                    <td ><button type="button" class="btn btn-primary" (click) = "navListing(listing.description)">Details</button></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{
+    "_id" : ObjectId("60e85edb5724033aa88f525e"),
+    "wantToBuy" : [],
+    "paths" : [ 
+        "avatar-1625845436145.jpeg", 
+        "avatar-1625845436167.jpeg", 
+        "avatar-1625845436170.jpeg", 
+        "avatar-1625845436172.jpeg"
+    ],
+    "description" : "Family home",
+    "city" : "Cuprija",
+    "municipality" : "Cuprija",
+    "address" : "Sinjdeliceva",
+    "number" : 4,
+    "type" : "house",
+    "numoflevels" : 2,
+    "level" : 2,
+    "size" : 130,
+    "numofrooms" : 6,
+    "furnished" : "yes",
+    "price" : 70000,
+    "owner" : "kaca123",
+    "status" : "1",
+    "promoted" : "0",
+    "buyer" : "",
+    "__v" : 0
+}

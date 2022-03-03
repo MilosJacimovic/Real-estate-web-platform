@@ -1,0 +1,27 @@
+{
+    "_id" : ObjectId("60e862d85724033aa88f5264"),
+    "wantToBuy" : [],
+    "paths" : [ 
+        "avatar-1625845405825.jpeg", 
+        "avatar-1625845405826.jpeg", 
+        "avatar-1625845405828.jpeg", 
+        "avatar-1625845405831.jpeg"
+    ],
+    "description" : "Office space",
+    "city" : "Belgrade",
+    "municipality" : "Vozdovac",
+    "address" : "Bulevar Oslobodjenja",
+    "number" : 68,
+    "type" : "house",
+    "numoflevels" : 2,
+    "level" : 2,
+    "size" : 96,
+    "numofrooms" : 8,
+    "furnished" : "no",
+    "price" : 300000,
+    "owner" : "mihajlo123",
+    "status" : "1",
+    "promoted" : "0",
+    "buyer" : "",
+    "__v" : 0
+}
